@@ -6,6 +6,20 @@ import java.util.List;
 
 public class LocationView {
 
+	public void viewOne(LocationDTO locationDTO) {
+		
+		System.out.print(locationDTO.getLocation_id() + "\t");
+		System.out.print(locationDTO.getStreet_address() + "\t");
+		System.out.print(locationDTO.getPostal_code() + "\t");
+		System.out.print(locationDTO.getCity() + "\t");
+		System.out.print(locationDTO.getState_province() + "\t");
+		System.out.println(locationDTO.getCountry_id());
+		System.out.println("====================================================================================");
+		
+	}
+	
+	
+	
 	// 출력
 	public void view(List<LocationDTO> ar) {
 		

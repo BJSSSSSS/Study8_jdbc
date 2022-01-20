@@ -7,6 +7,7 @@ import com.byeon.s1.department.DepartmentController;
 import com.byeon.s1.department.DepartmentDAO;
 import com.byeon.s1.department.DepartmentDTO;
 import com.byeon.s1.department.DepartmentView;
+import com.byeon.s1.location.LocationController;
 import com.byeon.s1.location.LocationDAO;
 import com.byeon.s1.location.LocationDTO;
 import com.byeon.s1.location.LocationView;
@@ -16,14 +17,20 @@ public class StartMain {
 	public static void main(String[] args) {
 		System.out.println("DB 연동 테스트 시작");
 		
-		DepartmentController departmentController = new DepartmentController();
+//		DepartmentController departmentController = new DepartmentController();
+//		try {
+//			departmentController.start();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		LocationController locationController = new LocationController();
 		try {
-			departmentController.start();
+			locationController.start();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		
 		//---------------- DEPARTMENT TEST --------------
 //		DepartmentDTO departmentDTO = new DepartmentDTO();
