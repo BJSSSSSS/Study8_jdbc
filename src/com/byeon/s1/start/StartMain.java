@@ -1,22 +1,18 @@
 package com.byeon.s1.start;
 
-import java.util.List;
-import java.util.Scanner;
-
-import com.byeon.s1.department.DepartmentController;
-import com.byeon.s1.department.DepartmentDAO;
-import com.byeon.s1.department.DepartmentDTO;
-import com.byeon.s1.department.DepartmentView;
-import com.byeon.s1.location.LocationController;
-import com.byeon.s1.location.LocationDAO;
-import com.byeon.s1.location.LocationDTO;
-import com.byeon.s1.location.LocationView;
-
 public class StartMain {
 
 	public static void main(String[] args) {
 		System.out.println("DB 연동 테스트 시작");
 		
+		FrontController frontController = new FrontController();
+		
+		try {
+			frontController.mainStart();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //		DepartmentController departmentController = new DepartmentController();
 //		try {
 //			departmentController.start();
@@ -24,13 +20,13 @@ public class StartMain {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-		
-		LocationController locationController = new LocationController();
-		try {
-			locationController.start();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		
+//		LocationController locationController = new LocationController();
+//		try {
+//			locationController.start();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 		
 		//---------------- DEPARTMENT TEST --------------
 //		DepartmentDTO departmentDTO = new DepartmentDTO();
@@ -66,7 +62,6 @@ public class StartMain {
 //		}
 	
 
-	
 		System.out.println("DB 연동 테스트 끝");
 	}
 }

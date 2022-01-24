@@ -43,7 +43,7 @@ public class DepartmentController {
 				departmentDTO = departmentDAO.getOne(departmentDTO);
 				
 				if(departmentDTO != null) {
-					departmentView.viewOne(departmentDTO);
+					departmentView.view(departmentDTO);
 				}else {
 					System.out.println("검색 실패!");
 				}

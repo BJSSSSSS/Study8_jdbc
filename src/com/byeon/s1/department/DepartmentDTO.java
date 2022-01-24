@@ -2,12 +2,19 @@
 
 package com.byeon.s1.department;
 
+import java.util.List;
+
+import com.byeon.s1.employee.EmployeeDTO;
+
 public class DepartmentDTO {
 
+	//해당 테이블에 있는 컬럼명과 데이터타입을 동일하게
 	private Integer department_id;
 	private String department_name;
 	private Integer manager_id;
 	private Integer location_id;
+	//EmployeeDTO 멤버변수가 있어야 함
+	private List<EmployeeDTO> employeeDTOs;
 	
 	public Integer getDepartment_id() {
 		return department_id;

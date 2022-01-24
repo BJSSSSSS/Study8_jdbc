@@ -6,7 +6,7 @@ import java.util.List;
 
 public class DepartmentView {
 	
-	public void viewOne(DepartmentDTO departmentDTO) {
+	public void view(DepartmentDTO departmentDTO) {
 		
 		System.out.print(departmentDTO.getDepartment_id()+"\t");
 		System.out.print(departmentDTO.getDepartment_name()+"\t");
@@ -22,10 +22,7 @@ public class DepartmentView {
 		//모두 출력
 
 		for(int i=0; i<ar.size(); i++) {
-			System.out.print(ar.get(i).getDepartment_id()+"\t");
-			System.out.print(ar.get(i).getDepartment_name()+"\t");
-			System.out.print(ar.get(i).getManager_id()+"\t");
-			System.out.println(ar.get(i).getLocation_id());
+			this.view(ar.get(i));
 			System.out.println("=============================================");
 		}
 		

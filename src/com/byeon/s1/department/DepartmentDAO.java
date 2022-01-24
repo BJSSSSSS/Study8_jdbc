@@ -17,6 +17,35 @@ public class DepartmentDAO {
 		dbConnector = new DBConnector();
 	}
 	
+	//부서정보, 부서에 근무하는 사원들의 정보
+	public void getDEP_EMPList() throws Exception {
+		
+		Connection con = dbConnector.getConnect();
+		
+		String sql ="SELECT D.*, E.* "
+				+ "FROM EMPLOYEES E "
+				+ "    INNER JOIN "
+				+ "    DEPARTMENTS D "
+				+ "    ON(E.DEPARTMENT_ID = D.DEPARTMENT_ID) ";
+		
+		PreparedStatement st = con.prepareStatement(sql);
+		
+		ResultSet rs = st.executeQuery();
+		
+		while(rs.next()) {
+			
+		}
+		
+		
+		rs.close();
+		st.close();
+		con.close();
+		
+
+	}
+	
+	
+	
 	//부서번호로 조회
 	public DepartmentDTO getOne(DepartmentDTO dep) throws Exception{
 		//여기서 밑에 null로 잡는것은 if문을 나왔을때도 값을 잡는게 있어야 하기 때문이다! 잊지말자

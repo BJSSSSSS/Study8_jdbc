@@ -38,7 +38,7 @@ public class LocationController {
 					String city = scanner.next();
 					LocationDTO locationDTO = locationDAO.getOne(city);
 					if(locationDTO != null) {
-						locationView.viewOne(locationDTO);
+						locationView.view(locationDTO);
 					}else {
 						System.out.println("검색 실패!");
 					}
