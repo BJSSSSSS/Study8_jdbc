@@ -10,9 +10,36 @@ public class StartMain {
 		try {
 			frontController.mainStart();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+
+		
+		
+		
+//		try {
+//		//frontController.mainStart();
+//		RegionDAO regionDAO = new RegionDAO();
+//		RegionDTO regionDTO = new RegionDTO();
+////		regionDTO.setRegion_id(6L);
+////		regionDTO.setRegion_name("South Pole");
+//		//int result = regionDAO.setInsert(regionDTO);
+//		
+//		regionDTO.setRegion_id(6L);
+//		int result = regionDAO.setDelete(regionDTO);
+//		
+//		if(result > 0) {
+//			System.out.println("작동 성공!");
+//		}else {
+//			System.out.println("작동 실패!");
+//		}
+//		
+//	} catch (Exception e) {
+//		e.printStackTrace();
+//	}
+//		
+		
+
 //		DepartmentController departmentController = new DepartmentController();
 //		try {
 //			departmentController.start();
